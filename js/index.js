@@ -5,8 +5,8 @@ const url = 'https://talaikis.com/api/quotes/random/';
 const button = document.querySelector('#quote__generate');
 const parent = document.getElementById('quote__display');
 const tweet = document.getElementsByClassName('twitter-share-button')[0];
-let quote = document.createElement('p');
-let author = document.createElement('p');
+let quote = document.createElement('span');
+let author = document.createElement('span');
 
 // Quote Generater
 const quoteGenerate = () => {
