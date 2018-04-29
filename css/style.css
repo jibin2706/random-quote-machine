@@ -2,7 +2,6 @@ html,
 body {
 	height: 100%;
 	margin: 0;
-	font-size: 1em;
 }
 
 body {
@@ -13,7 +12,9 @@ body {
 
 .quote {
 	background-color: #fffffa;
+	border-radius: 5px;
 	padding: 2%;
+	font-size: 1.5em;
 }
 
 .container {
@@ -33,9 +34,17 @@ body {
 	background-color: inherit;
 	color: inherit;
 	cursor: pointer;
-	padding: 5px 8px;
-	border: 2px solid black;
+	padding: 5px 8px;	
 	border-radius: 5px;
 	display: inline;
 	margin: 10px 20px;
+}
+
+.button--border {
+	border: 2px solid black;
+}
+
+.italics {
+	font-style: italic;
+	font-size: 1em;
 }

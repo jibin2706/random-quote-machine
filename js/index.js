@@ -6,7 +6,8 @@ const button = document.querySelector('#quote__generate');
 const parent = document.getElementById('quote__display');
 const tweet = document.getElementsByClassName('twitter-share-button')[0];
 let quote = document.createElement('span');
-let author = document.createElement('span');
+let author = document.createElement('p');
+author.classList.add('italics');
 
 // Quote Generater
 const quoteGenerate = () => {
@@ -17,7 +18,7 @@ const quoteGenerate = () => {
 			tweet.href=`https://twitter.com/intent/tweet?text=${data.quote}-${data.author}`;
 
 			parent.appendChild(quote);
-			parent.appendChild(author);		
+			parent.appendChild(author);
 			randomColorGenerater();
 	});
 };
