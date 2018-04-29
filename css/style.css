@@ -1,0 +1,52 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+	font-size: 1em;
+}
+
+body {
+	color: white;
+	font-family: 'Shrikhand', cursive;
+}
+
+.container {
+	align-items: center;	
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+}
+
+main {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+main div {
+	font-size: 1.2em;
+	width: 80%;
+}
+
+#quote__generate {
+	display: flex;
+	align-items: center;
+	padding: 1em;
+}
+
+.button {
+	background-color: inherit;
+	color: inherit;
+	cursor: pointer;
+	padding: 5px 15px;
+	border: 3px solid white;
+	display: inline;
+	margin: 10px 20px;
+}
+
+img {
+	width: 64px;
+	height: 64px;
+}
