@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<title>Random Quote</title>
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+	 crossorigin="anonymous">
 </head>
+
 <body>
 	<div class="container">
 		<div class="quote">
-			<div id="quote__display">				
+			<div id="quote__display">
 				<i class="fas fa-quote-left"></i>
-			</div>	
+			</div>
 
 			<div id="quote__generate">
-				<button class="button button--border">New Quote</button>				
-				<a class="twitter-share-button button"	href="" data-size="large"><i class="fab fa-twitter"></i></a>
-			</div>			
+				<button class="button button--border">New Quote</button>
+				<a class="twitter-share-button button" href="" data-size="large"><i class="fab fa-twitter"></i></a>
+			</div>
 		</div>
 
 	</div>
-	
+	<div id="spinner-container">
+		<div class="spinner">
+			<div class="double-bounce1"></div>
+			<div class="double-bounce2"></div>
+		</div>
+	</div>
 	<script src="js/index.js"></script>
 	<!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 </body>
+
 </html>
