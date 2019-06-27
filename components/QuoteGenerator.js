@@ -43,7 +43,7 @@ const colors = [
 function QuoteGenerator() {
   const [quotes, setQuotes] = useState([]);
   const [loading, changeStatus] = useState(true);
-  const [currentQuote, setCurrentQuote] = useState({ quote: "", author: "" });
+  const [currentQuote, setCurrentQuote] = useState({ quote: "", author: "", tweetURL: "" });
 
   useEffect(function fetchPosts() {
     axios(quotesURL)
@@ -65,7 +65,9 @@ function QuoteGenerator() {
 
   const newQuote = () => {
     const { quote, author } = quotes[randomIndex(quotes.length)];
-    setCurrentQuote({ quote, author });
+    const tweetURL = `https://twitter.com/intent/tweet?hashtags=quotes&text=${quote} -${author}`;
+
+    setCurrentQuote({ quote, author, tweetURL });
     changeBackgroudColor();
   };
 
@@ -88,16 +90,11 @@ function QuoteGenerator() {
           <div id="author">{currentQuote.author}</div>
         </div>
         <div id="tools">
-          <a
-            className="link"
-            target="_blank"
-            rel="noopener noreferrer"
-            href={`https://twitter.com/intent/tweet?hashtags=quotes&text=${currentQuote.quote} - ${
-              currentQuote.author
-            }`}
-          >
-            Tweet
-          </a>
+          <span>
+            <a className="link" href={currentQuote.tweetURL}>
+              Tweet this quote
+            </a>
+          </span>
           <button onClick={newQuote}>New Quote</button>
         </div>
       </div>
