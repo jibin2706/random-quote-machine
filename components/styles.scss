@@ -10,8 +10,7 @@ body {
   color: #444444;
 }
 
-body,
-meta[name="theme-color"] {
+body {
   transition: 400ms;
 }
 
@@ -21,7 +20,7 @@ img {
 }
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,12 +53,13 @@ img {
 }
 
 #generator button {
-  border: none;
+  border: 1px solid #444444;
   padding: 8px 10px;
   font-size: 15px;
   cursor: pointer;
   outline: none;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  background: transparent;
 }
 
 #generator button:active {
@@ -71,5 +71,8 @@ img {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding-bottom: 10px;
+}
+
+.link {
+  color: red;
 }

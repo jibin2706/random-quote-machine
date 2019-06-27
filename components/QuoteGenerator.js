@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Loading from "./Loading";
 
 const quotesURL =
   "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json";
@@ -78,6 +79,7 @@ function QuoteGenerator() {
     return Math.floor(Math.random() * index);
   };
 
+  if (loading) return <Loading />;
   return (
     <main className="container">
       <div id="generator">
@@ -87,13 +89,14 @@ function QuoteGenerator() {
         </div>
         <div id="tools">
           <a
+            className="link"
             target="_blank"
             rel="noopener noreferrer"
             href={`https://twitter.com/intent/tweet?hashtags=quotes&text=${currentQuote.quote} - ${
               currentQuote.author
             }`}
           >
-            <img src="" alt="twitter the quote" />
+            Tweet
           </a>
           <button onClick={newQuote}>New Quote</button>
         </div>
